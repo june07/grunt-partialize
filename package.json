@@ -1,0 +1,38 @@
+{
+  "name": "grunt-html-partialize",
+  "description": "Split whole html files into partial html files.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/june07/grunt-html-partialize",
+  "author": {
+    "name": "june07",
+    "email": "june07@onezerohosting.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/june07/grunt-html-partialize"
+  },
+  "bugs": {
+    "url": "https://github.com/june07/grunt-html-partialize/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/june07/grunt-html-partialize/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
