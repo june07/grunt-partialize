@@ -1,0 +1,35 @@
+<html ng-app="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    </head>
+    <body ng-controller="">
+        <header>
+            Hello, I'm the header.
+        </header>
+        <!-- Partialize:copy { "filename": "helloworld-navigation.html"} -->
+        <!-- <div ui-view="navigation"></div> -->
+        <!-- BEGIN NAVIGATION-->
+        <div class="row">
+          <h3>Account</h3>
+          <ul>
+            <li>Account Link 1<br/></li>
+            <li>Account Link 2<br/></li>
+          </ul>
+        </div>
+        <div class="row">
+          <h3>User</h3>
+          <ul>
+            <li>User Link 1<br/></li>
+            <li>User Link 2<br/></li>
+            <li>User Link 3<br/></li>
+          </ul>
+        </div>
+        <!-- END NAVIGATION-->
+        <!-- //Partialize:copy -->
+        <!-- Partialize:copy { "filename": "helloworld-main.html"} -->
+        <!-- <div ui-view="main"></div> -->
+        Hello World.
+        <!-- //Partialize:copy -->
+    </body>
+</html>

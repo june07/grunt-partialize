@@ -8,6 +8,8 @@
 
 'use strict';
 
+var path = require('path');
+
 module.exports = function(grunt) {
 
   // Project configuration.
@@ -30,22 +32,10 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     html_partialize: {
-      default_options: {
-        options: {
-        },
-        files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
+      options: {
+        baseTagName: 'Partialize'
       },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
-      }
+      helloworld: { files: { 'test/': 'test/helloworld.html' }}
     },
 
     // Unit tests.
@@ -65,7 +55,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'html_partialize', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'html_partialize']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
