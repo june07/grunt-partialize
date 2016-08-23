@@ -1,6 +1,6 @@
 /*
- * grunt-html-partialize
- * https://github.com/june07/grunt-html-partialize
+ * grunt-partialize
+ * https://github.com/june07/grunt-partialize
  *
  * Copyright (c) 2016 june07
  * Licensed under the MIT license.
