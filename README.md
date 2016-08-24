@@ -17,14 +17,14 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-partialize');
 ```
 
-## The "html_partialize" task
+## The "partialize" task
 
 ### Overview
-In your project's Gruntfile, add a section named `html_partialize` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `partialize` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  html_partialize: {
+  partialize: {
     options: {
       // Task-specific options go here.
     },
@@ -37,49 +37,36 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
+#### options.baseTagName
 Type: `String`
-Default value: `',  '`
+Default value: `'Partialize'`
 
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
+A string value that is appended to the names of generated files.
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
 ```js
 grunt.initConfig({
-  html_partialize: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+  partialize: {
+    options: {
+      baseTagName: 'Partialize'
     },
-  },
+    helloworld: { files: { 'tmp/': 'test/helloworld.html' }}
+  }
 });
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+Will output the following files to the specified ```'tmp/'``` directory:
 
-```js
-grunt.initConfig({
-  html_partialize: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
+```
+> dir tmp
+ Directory of C:\grunt-partialize\tmp
+
+08/24/2016  03:07 AM    <DIR>          .
+08/24/2016  03:07 AM    <DIR>          ..
+08/24/2016  03:07 AM                67 Partialize_helloworld-main.html
+08/24/2016  03:07 AM               523 Partialize_helloworld-navigation.html
+08/24/2016  03:07 AM               382 Partialize_helloworld.html
 ```
 
 ## Contributing
